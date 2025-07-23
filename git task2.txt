@@ -1,0 +1,31 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+// Function declaration and definition to multiply two numbers
+int multiply(int a, int b) {
+    return a * b;
+}
+
+// Function declaration and definition to return a greeting with the given name
+string greet(const string& name) {
+    return "Hello, " + name + "!";
+}
+
+int main() {
+    int num1 = 6, num2 = 7;
+    string name = "YourName"; // replace YourName with your actual name
+
+    // Call multiply function
+    int product = multiply(num1, num2);
+
+    // Call greet function
+    string greeting = greet(name);
+
+    // Print results
+    cout << "Product: " << product << endl;
+    cout << greeting << endl;
+
+    return 0;
+}
