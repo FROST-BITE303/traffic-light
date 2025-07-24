@@ -1,0 +1,32 @@
+ #include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+enum TrafficLight {
+    RED = 1,
+    ORANGE = 2,
+    GREEN = 3
+};
+
+int main() {
+    srand(time(0)); // seed the RNG
+    int choice = rand() % 3 + 1; // generate a random number between 1 and 3
+
+    cout << "Traffic Lights" << endl;
+
+    switch (choice) {
+        case RED:
+            cout << "Red Light: STOP" << endl;
+            break;
+        case ORANGE:
+            cout << "Orange Light: CAUTION" << endl;
+            break;
+        case GREEN:
+            cout << "Green Light: GO" << endl;
+            break;
+            
+    }
+
+    return 0;
+}
