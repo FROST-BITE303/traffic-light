@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+class phone {
+public: // Access specifier
+string brand;
+string model;
+string color;
+int year;
+float price;
+phone() {
+cout << "Default Constructor Called" << endl;
+brand = "Unknown";
+model = "Unknown"; 
+color = "Unknown";
+year = 0; 
+price = 0.0;
+}
+phone(string b, string m, string c, int y,   float p){
+cout << "Constructor Called" << endl;
+brand = b;
+model = m; 
+color = c;
+year = y; 
+price = p;
+} 
+void printDetails() {
+cout << "Brand: " << brand << endl;
+cout << "Model: " << model << endl;
+cout << "Color: " << color << endl;
+cout << "Year: " << year << endl;
+cout << "Price: $" << price << endl;
+}
+}; 
+int main() {
+phone phone1;
+phone1.printDetails();
+cout << endl;
+phone phone2("SAMSUNG", "NOTE 20", "ROSEGOLD", 2021,  20000.0);
+phone2.printDetails();
+return 0;
+}
